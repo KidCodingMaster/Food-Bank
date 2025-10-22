@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %} Environment Stats {% endblock %}
+
+{% block content %}
+
+<div class="places">
+    {% for place in places %}
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ place }}</h5>
+                {% if places[place]["des"] %}
+                    <p class="card-text">Description: {{ places[place]["des"] }}</p>
+                {% endif %}
+
+                {% if places[place]["location"] %}
+                    <p class="card-text">Location: {{ places[place]["location"] }}</p>
+                {% endif %}
+
+                {% if places[place]["phone"] %}
+                    <p class="card-text">Phone Number: {{ places[place]["phone"] }}</p>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

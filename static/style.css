@@ -1,0 +1,67 @@
+.trash-icon {
+    width: 100px !important;
+    margin-left: 25px;
+}
+
+body {
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20vw;
+}
+
+#have-food {
+    margin-right: 10px;
+}
+
+.news {
+    justify-self: flex-end;
+}
+
+.title {
+    justify-self: center;
+    margin-top: 10px;
+}
+
+.news {
+    margin-top: 20px;
+}
+
+.main-inter {
+    margin-top: 35px;
+}
+
+
+hr {
+    width: 90vw;
+}
+
+img,
+#carousel {
+    width: 407px;
+    height: 271px;
+}
+
+.places {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.add-food {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.title {
+    text-decoration: none;
+    color: black;
+}
