@@ -16,12 +16,12 @@ def write_json(name, data):
         json.dump(data, f, indent=4)
 
 
-@app.route("/have")
+@app.route("/no")
 def have():
     return render_template("have_food.html", places=read_json("places.json"))
 
 
-@app.route("/no", methods=["GET", "POST"])
+@app.route("/have", methods=["GET", "POST"])
 def add_food():
     if request.method == "POST":
         title = request.form.get("title")
@@ -33,7 +33,7 @@ def add_food():
             "places.json",
             (
                 {title: {"des": des, "location": location, "phone": phone}}
-                | read_json("places.json")
+                | read_json("./places.json")
             ),
         )
 
